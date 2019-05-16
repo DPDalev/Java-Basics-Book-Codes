@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args){
+	
+		Scanner input = new Scanner(System.in);
+		
+		//Print the top rows: +---+
+		int numberOfRows = Integer.parseInt(input.nextLine());
+		System.out.print("+");
+		for	(int i = 0; i < numberOfRows - 2; i++){
+			System.out.print(" -");
+		}
+		System.out.println(" +");
+		
+		//Print the middle rows: | - - - |		
+		for	(int row = 0; row < numberOfRows - 2; row++){
+			System.out.print("|");
+			for (int i = 0; i < numberOfRows - 2; i++){
+				System.out.print(" -");
+			}
+			System.out.println(" |");
+		}
+		
+		//Print the bottom row: + - - - +
+		System.out.print("+");
+		for	(int i = 0; i < numberOfRows - 2; i++){
+			System.out.print(" -");
+		}
+		System.out.println(" +");
+	}
+}

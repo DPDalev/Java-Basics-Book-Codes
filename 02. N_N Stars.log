@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main{
+	
+	public static void main(String[] args){
+		Scanner input = new Scanner(System.in);
+		int n = Integer.parseInt(input.nextLine());
+		String symbol = "*";
+		for	(int i = 0; i < n; i++){
+			System.out.println(generateFrom(n, symbol));
+		}
+	}
+	
+	private static String generateFrom(int numberOfStars, String symbol){
+		StringBuffer builder = new StringBuffer();
+		for	(int i = 0; i < numberOfStars; i++){
+			builder.append(symbol);
+		}
+		return builder.toString();
+	}
+	
+}
